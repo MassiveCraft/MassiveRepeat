@@ -1,0 +1,104 @@
+name: massiverepeat
+version: 1.0.0
+main: com.massivecraft.massiverepeat.P
+depend: [mcore3, Vault]
+permissions:
+  massiverepeat.*:
+    default: op
+    children:
+      massiverepeat.kit.most: true
+      massiverepeat.repeat.*: true
+  massiverepeat.kit.most:
+    default: false
+    children:
+      massiverepeat.create: true
+      massiverepeat.add: true
+      massiverepeat.delete: true
+      massiverepeat.list: true
+      massiverepeat.show: true
+      massiverepeat.start: true
+      massiverepeat.restart: true
+      massiverepeat.pause: true
+      massiverepeat.stop: true
+      massiverepeat.field.*: true
+  massiverepeat.create:
+    default: false
+    description: create new repeat
+  massiverepeat.add:
+    default: false
+    description: create new repeat and autostart
+  massiverepeat.delete:
+    default: false
+    description: delete a repeater
+  massiverepeat.list:
+    default: false
+    description: list repeaters
+  massiverepeat.show:
+    default: false
+    description: show info on a repeater
+  massiverepeat.start:
+    default: false
+    description: start existing repeater
+  massiverepeat.restart:
+    default: false
+    description: stop then start
+  massiverepeat.pause:
+    default: false
+    description: pause repeater
+  massiverepeat.stop:
+    default: false
+    description: stop repeater a go to start
+  massiverepeat.repeat.*:
+    default: false
+    description: repeat any command
+  massiverepeat.field.*:
+    default: false
+    children:
+      massiverepeat.field.cmds.*: true
+      massiverepeat.field.permanent: true
+      massiverepeat.field.length: true
+      massiverepeat.field.pos: true
+      massiverepeat.field.mindelay: true
+      massiverepeat.field.maxdelay: true
+      massiverepeat.field.mininterval: true
+      massiverepeat.field.maxinterval: true
+  massiverepeat.field.cmds.*:
+    default: false
+    children:
+      massiverepeat.field.cmds.list: true
+      massiverepeat.field.cmds.add: true
+      massiverepeat.field.cmds.remove: true
+      massiverepeat.field.cmds.clear: true
+  massiverepeat.field.cmds.list:
+    default: false
+    description: list commands in repeater
+  massiverepeat.field.cmds.add:
+    default: false
+    description: add command to repeater
+  massiverepeat.field.cmds.remove:
+    default: false
+    description: remove command from repeater
+  massiverepeat.field.cmds.clear:
+    default: false
+    description: clear commands from repeater
+  massiverepeat.field.permanent:
+    default: false
+    description: edit permanent field
+  massiverepeat.field.length:
+    default: false
+    description: edit length field
+  massiverepeat.field.pos:
+    default: false
+    description: edit pos field
+  massiverepeat.field.mindelay:
+    default: false
+    description: edit mindelay field
+  massiverepeat.field.maxdelay:
+    default: false
+    description: edit maxdelay field
+  massiverepeat.field.mininterval:
+    default: false
+    description: edit mininterval field
+  massiverepeat.field.maxinterval:
+    default: false
+    description: edit maxinterval field

@@ -2,7 +2,7 @@ package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.mcore3.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class CmdFieldCmdClear extends RepeatCommand
 {

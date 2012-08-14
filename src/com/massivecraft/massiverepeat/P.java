@@ -6,7 +6,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 
 import com.massivecraft.massiverepeat.cmd.RepeatBasecommand;
 import com.massivecraft.massiverepeat.cmdarg.AHRepeater;
-import com.massivecraft.mcore3.MPlugin;
+import com.massivecraft.mcore4.MPlugin;
 
 public class P extends MPlugin
 {

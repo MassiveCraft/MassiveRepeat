@@ -1,7 +1,7 @@
 package com.massivecraft.massiverepeat.cmdutil;
 
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.mcore3.Predictate;
+import com.massivecraft.mcore4.Predictate;
 
 public class RepeaterCreatorNameEqPredictate implements Predictate<Repeater>
 {

@@ -9,8 +9,8 @@ import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
 import com.massivecraft.massiverepeat.cmdutil.ListCommandComparator;
 import com.massivecraft.massiverepeat.cmdutil.RepeaterCreatorNameEqPredictate;
-import com.massivecraft.mcore3.cmd.req.ReqHasPerm;
-import com.massivecraft.mcore3.util.Txt;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore4.util.Txt;
 
 public class CmdList extends RepeatCommand
 {

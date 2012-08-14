@@ -1,6 +1,6 @@
 package com.massivecraft.massiverepeat.cmd;
 
-import com.massivecraft.mcore3.cmd.HelpCommand;
+import com.massivecraft.mcore4.cmd.HelpCommand;
 
 public class CmdFieldCmd extends RepeatCommand
 {

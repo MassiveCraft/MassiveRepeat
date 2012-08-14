@@ -8,10 +8,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.massivecraft.mcore3.util.IntervalUtil;
-import com.massivecraft.mcore3.util.Txt;
+import com.massivecraft.mcore4.util.IntervalUtil;
+import com.massivecraft.mcore4.util.Txt;
 
-public class Repeater extends com.massivecraft.mcore3.persist.Entity<Repeater> implements Runnable
+public class Repeater extends com.massivecraft.mcore4.persist.Entity<Repeater> implements Runnable
 {
 	// -------------------------------------------- //
 	// META

@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.mcore3.cmd.req.ReqHasPerm;
-import com.massivecraft.mcore3.util.Txt;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore4.util.Txt;
 
 public class CmdFieldCmdList extends RepeatCommand
 {

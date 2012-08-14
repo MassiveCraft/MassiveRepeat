@@ -2,7 +2,7 @@ package com.massivecraft.massiverepeat;
 
 import java.io.File;
 
-import com.massivecraft.mcore3.persist.gson.GsonClassManager;
+import com.massivecraft.mcore4.persist.gson.GsonClassManager;
 
 public class RepeaterManager extends GsonClassManager<Repeater>
 {

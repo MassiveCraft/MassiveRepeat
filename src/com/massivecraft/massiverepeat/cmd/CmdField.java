@@ -1,7 +1,7 @@
 package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.Permission;
-import com.massivecraft.mcore3.cmd.HelpCommand;
+import com.massivecraft.mcore4.cmd.HelpCommand;
 
 public class CmdField extends RepeatCommand
 {

@@ -4,8 +4,8 @@ import org.bukkit.command.CommandSender;
 
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
-import com.massivecraft.mcore3.MPlugin;
-import com.massivecraft.mcore3.cmd.arg.AHBase;
+import com.massivecraft.mcore4.MPlugin;
+import com.massivecraft.mcore4.cmd.arg.AHBase;
 
 public class AHRepeater extends AHBase<Repeater>
 {

@@ -2,6 +2,8 @@ package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
+import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
+import com.massivecraft.mcore4.cmd.arg.ARInteger;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class CmdFieldCmdRemove extends RepeatCommand
@@ -17,10 +19,10 @@ public class CmdFieldCmdRemove extends RepeatCommand
 	@Override
 	public void perform()
 	{
-		Repeater repeater = this.argAs(0, Repeater.class);
+		Repeater repeater = this.arg(0, ARRepeater.get());
 		if (repeater == null) return;
 		
-		Integer index = this.argAs(1, Integer.class);
+		Integer index = this.arg(1, ARInteger.get());
 		if (index == null) return;
 		
 		if (index > repeater.getCmds().size())

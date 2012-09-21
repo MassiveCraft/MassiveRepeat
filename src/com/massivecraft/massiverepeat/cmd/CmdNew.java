@@ -6,6 +6,7 @@ import com.massivecraft.massiverepeat.P;
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
+import com.massivecraft.mcore4.cmd.arg.ARInteger;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 import com.massivecraft.mcore4.util.IntervalUtil;
 import com.massivecraft.mcore4.util.Txt;
@@ -53,7 +54,7 @@ public class CmdNew extends RepeatCommand
 			msg("<b>Invalid interval.");
 		}
 		
-		Integer length = this.argAs(3, Integer.class);
+		Integer length = this.arg(3, ARInteger.get());
 		if (length == null) return;
 		
 		String command = null;

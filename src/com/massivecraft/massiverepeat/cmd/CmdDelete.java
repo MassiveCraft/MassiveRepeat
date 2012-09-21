@@ -2,6 +2,7 @@ package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
+import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class CmdDelete extends RepeatCommand
@@ -16,7 +17,7 @@ public class CmdDelete extends RepeatCommand
 	@Override
 	public void perform()
 	{
-		Repeater repeater = this.argAs(0, Repeater.class);
+		Repeater repeater = this.arg(0, ARRepeater.get());
 		if (repeater == null) return;
 		
 		this.msg("<i>Deleted repeater \"<h>"+repeater.getId()+"<i>\".");

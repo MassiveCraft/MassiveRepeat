@@ -5,7 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
 import com.massivecraft.massiverepeat.cmd.RepeatBasecommand;
-import com.massivecraft.massiverepeat.cmdarg.AHRepeater;
 import com.massivecraft.mcore4.MPlugin;
 
 public class P extends MPlugin
@@ -48,9 +47,6 @@ public class P extends MPlugin
 		// Add Base Commands
 		this.basecommand = new RepeatBasecommand();
 		this.basecommand.register();
-		
-		// Add Argument Handlers
-		this.cmd.setArgHandler(Repeater.class, AHRepeater.getInstance());
 		
 		postEnable();
 	}

@@ -3,6 +3,7 @@ package com.massivecraft.massiverepeat.cmd;
 import com.massivecraft.massiverepeat.P;
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
+import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 import com.massivecraft.mcore4.util.Txt;
 
@@ -20,7 +21,7 @@ public class CmdFieldCmdAdd extends RepeatCommand
 	@Override
 	public void perform()
 	{		
-		Repeater repeater = this.argAs(0, Repeater.class);
+		Repeater repeater = this.arg(0, ARRepeater.get());
 		if (repeater == null) return;
 		
 		String command = this.argConcatFrom(1);

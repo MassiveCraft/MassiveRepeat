@@ -9,6 +9,7 @@ import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
 import com.massivecraft.massiverepeat.cmdutil.ListCommandComparator;
 import com.massivecraft.massiverepeat.cmdutil.RepeaterCreatorNameEqPredictate;
+import com.massivecraft.mcore4.cmd.arg.ARInteger;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 import com.massivecraft.mcore4.util.Txt;
 
@@ -25,7 +26,7 @@ public class CmdList extends RepeatCommand
 	@Override
 	public void perform()
 	{
-		Integer pageHumanBased = this.argAs(0, Integer.class, 1);
+		Integer pageHumanBased = this.arg(0, ARInteger.get(), 1);
 		if (pageHumanBased == null) return;
 		
 		String creatorName = this.arg(1);

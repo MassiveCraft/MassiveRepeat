@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.massivecraft.massiverepeat.Permission;
 import com.massivecraft.massiverepeat.Repeater;
+import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
+import com.massivecraft.mcore4.cmd.arg.ARInteger;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 import com.massivecraft.mcore4.util.Txt;
 
@@ -20,10 +22,10 @@ public class CmdShow extends RepeatCommand
 	@Override
 	public void perform()
 	{
-		Repeater repeater = this.argAs(0, Repeater.class);
+		Repeater repeater = this.arg(0, ARRepeater.get());
 		if (repeater == null) return;
 		
-		Integer pageHumanBased = this.argAs(1, Integer.class, 1);
+		Integer pageHumanBased = this.arg(1, ARInteger.get(), 1);
 		if (pageHumanBased == null) return;
 		
 		List<String> lines = Txt.parseWrap(repeater.getDescMultiLine());

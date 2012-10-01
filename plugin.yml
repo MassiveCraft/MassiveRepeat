@@ -27,6 +27,7 @@ permissions:
   massiverepeat.field.mininterval: {description: edit mininterval field, default: op}
   massiverepeat.field.maxinterval: {description: edit maxinterval field, default: op}
   massiverepeat.repeat.*: {description: repeat any command, default: op}
+# massiverepeat.repeat.whatever_you_want: is added by this plugin on the fly
 # -------------------------------------------- #
 # STAR NOTATION
 # -------------------------------------------- #

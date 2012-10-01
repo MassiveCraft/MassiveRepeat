@@ -14,10 +14,6 @@ public class CmdFieldCmd extends RepeatCommand
 		this.addSubCommand(new CmdFieldCmdRemove());
 		this.addSubCommand(new CmdFieldCmdClear());
 		
-		/*this.addSubCommand(new CmdGateTargetHere());
-		this.addSubCommand(new CmdGateTargetGate());
-		this.addSubCommand(new CmdGateTargetGoto());
-		this.addSubCommand(new CmdGateTargetRemove());*/
 		this.setDesc("manage repeater commads");
 	}
 	

@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.RepeatPerm;
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.massiverepeat.RepeaterManager;
+import com.massivecraft.massiverepeat.RepeaterColl;
 import com.massivecraft.mcore4.cmd.arg.ARInteger;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 import com.massivecraft.mcore4.util.IntervalUtil;
@@ -74,11 +74,11 @@ public class CmdNew extends RepeatCommand
 		Repeater repeater;
 		if (permanent)
 		{
-			repeater = RepeaterManager.i.create(idOrTemp);
+			repeater = RepeaterColl.i.create(idOrTemp);
 		}
 		else
 		{
-			repeater = RepeaterManager.i.create();
+			repeater = RepeaterColl.i.create();
 		}
 		
 		repeater.setCreator(sender);
@@ -100,8 +100,6 @@ public class CmdNew extends RepeatCommand
 		{
 			repeater.start();
 		}
-		
-		repeater.save();
 		
 		String textAndStarted = this.autostart ? "and autostarted " : "";
 		String textPermanent = permanent ? "permanent" : "volatile";

@@ -22,11 +22,13 @@ public class P extends MPlugin
 		if ( ! preEnable()) return;
 		
 		// Load Conf from disk
-		Conf.load();
+		ConfServer.i.load();
+		
+		RepeaterColl.i.init();
 		
 		// Load and startup repeaters
-		int startedCount = RepeaterManager.i.startup();
-		int totalCount = RepeaterManager.i.getAll().size();
+		int startedCount = RepeaterColl.i.startup();
+		int totalCount = RepeaterColl.i.getAll().size();
 		
 		log(""+startedCount+" repeaters loaded.");
 		log(""+totalCount+" repeaters started.");

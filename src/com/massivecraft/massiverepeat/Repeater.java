@@ -11,14 +11,39 @@ import org.bukkit.entity.Player;
 import com.massivecraft.mcore4.util.IntervalUtil;
 import com.massivecraft.mcore4.util.Txt;
 
-public class Repeater extends com.massivecraft.mcore4.persist.Entity<Repeater> implements Runnable
+public class Repeater extends com.massivecraft.mcore4.store.Entity<Repeater, String> implements Runnable
 {
 	// -------------------------------------------- //
 	// META
 	// -------------------------------------------- //
 	
-	@Override public RepeaterManager getManager() { return RepeaterManager.i; }
 	@Override protected Repeater getThis() { return this; }
+	
+	private final static transient Repeater defaultInstance = new Repeater();
+	@Override public Repeater getDefaultInstance(){ return defaultInstance; }
+	@Override protected Class<Repeater> getClazz() { return Repeater.class; }
+	
+	// -------------------------------------------- //
+	// LOAD
+	// -------------------------------------------- //
+	
+	@Override
+	public Repeater load(Repeater that)
+	{
+		System.out.println("did creatorName" + creatorName);
+		this.creatorName = that.creatorName;
+		this.cmds = that.cmds;
+		this.permanent = that.permanent;
+		this.length = that.length;
+		this.pos = that.pos;
+		this.running = that.running;
+		this.lastErrorCmd = that.lastErrorCmd;
+		this.mindelay = that.mindelay;
+		this.maxdelay = that.maxdelay;
+		this.mininterval = that.mininterval;
+		this.maxinterval = that.maxinterval;
+		return this;
+	}
 	
 	// -------------------------------------------- //
 	// FIELDS
@@ -127,7 +152,7 @@ public class Repeater extends com.massivecraft.mcore4.persist.Entity<Repeater> i
 	}
 	
 	// -------------------------------------------- //
-	// MEDIA-PLAYER-ISH METHODS
+	// MEDIAPLAYER-ISH METHODS
 	// -------------------------------------------- //
 	
 	public boolean start()

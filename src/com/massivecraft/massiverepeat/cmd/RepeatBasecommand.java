@@ -1,6 +1,6 @@
 package com.massivecraft.massiverepeat.cmd;
 
-import com.massivecraft.massiverepeat.Conf;
+import com.massivecraft.massiverepeat.ConfServer;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.mcore4.cmd.HelpCommand;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
@@ -10,7 +10,7 @@ public class RepeatBasecommand extends RepeatCommand
 	public RepeatBasecommand()
 	{
 		super();
-		this.addAliases(Conf.aliases);
+		this.addAliases(ConfServer.aliases);
 		this.addSubCommand(HelpCommand.getInstance());
 		this.addSubCommand(new CmdNew("create", InternalPermission.CREATE, false));
 		this.addSubCommand(new CmdNew("add", InternalPermission.ADD, true));

@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.massiverepeat.RepeaterManager;
+import com.massivecraft.massiverepeat.RepeaterColl;
 import com.massivecraft.mcore4.cmd.MCommand;
 import com.massivecraft.mcore4.cmd.arg.ARAbstractSelect;
 
@@ -19,7 +19,7 @@ public class ARRepeater extends ARAbstractSelect<Repeater>
 	@Override
 	public Repeater select(String str, MCommand mcommand)
 	{
-		return RepeaterManager.i.get(str);
+		return RepeaterColl.i.get(str);
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class ARRepeater extends ARAbstractSelect<Repeater>
 	@Override
 	public Collection<String> altNames(MCommand mcommand)
 	{
-		return RepeaterManager.i.getIds();
+		return RepeaterColl.i.ids();
 	}
 	
 	// -------------------------------------------- //

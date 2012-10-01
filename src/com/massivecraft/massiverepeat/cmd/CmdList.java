@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.massiverepeat.RepeaterManager;
+import com.massivecraft.massiverepeat.RepeaterColl;
 import com.massivecraft.massiverepeat.cmdutil.ListCommandComparator;
 import com.massivecraft.massiverepeat.cmdutil.RepeaterCreatorNameEqPredictate;
 import com.massivecraft.mcore4.cmd.arg.ARInteger;
@@ -33,11 +33,11 @@ public class CmdList extends RepeatCommand
 		Collection<Repeater> repeaters;
 		if (creatorName != null)
 		{
-			repeaters = RepeaterManager.i.getAll(new RepeaterCreatorNameEqPredictate(creatorName), ListCommandComparator.instance);
+			repeaters = RepeaterColl.i.getAll(new RepeaterCreatorNameEqPredictate(creatorName), ListCommandComparator.instance);
 		}
 		else
 		{
-			repeaters = RepeaterManager.i.getAll(null, ListCommandComparator.instance);
+			repeaters = RepeaterColl.i.getAll(null, ListCommandComparator.instance);
 		}
 		
 		List<String> lines = new ArrayList<String>();

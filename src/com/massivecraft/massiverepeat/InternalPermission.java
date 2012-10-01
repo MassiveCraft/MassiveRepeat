@@ -6,6 +6,9 @@ import com.massivecraft.mcore4.util.Perm;
 
 public enum InternalPermission
 {
+	ACCESS_BASE("access.base"),
+	ACCESS_BASE_FIELD("access.base.field"),
+	ACCESS_BASE_FIELD_CMD("access.base.field.cmd"),
 	CREATE("create"),
 	ADD("add"),
 	DELETE("delete"),

@@ -6,6 +6,11 @@ permissions:
 # -------------------------------------------- #
 # THE REAL NODES
 # -------------------------------------------- #
+# access
+  massiverepeat.access.base: {description: access base command, default: op}
+  massiverepeat.access.base.field: {description: access field command, default: op}
+  massiverepeat.access.base.field.cmd: {description: access cmd command, default: op}
+# regular
   massiverepeat.create: {description: create new repeat, default: op}
   massiverepeat.add: {description: create new repeat and autostart, default: op}
   massiverepeat.delete: {description: delete a repeater, default: op}
@@ -31,6 +36,12 @@ permissions:
 # -------------------------------------------- #
 # STAR NOTATION
 # -------------------------------------------- #
+  massiverepeat.access.*:
+    default: op
+    children:
+      massiverepeat.access.base: true
+      massiverepeat.access.base.field: true
+      massiverepeat.access.base.field.cmd: true
   massiverepeat.*:
     default: op
     children:
@@ -60,6 +71,7 @@ permissions:
   massiverepeat.kit.most:
     default: false
     children:
+      massiverepeat.access.*: true
       massiverepeat.create: true
       massiverepeat.add: true
       massiverepeat.delete: true

@@ -3,6 +3,7 @@ package com.massivecraft.massiverepeat.cmd;
 import com.massivecraft.massiverepeat.Conf;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.mcore4.cmd.HelpCommand;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class RepeatBasecommand extends RepeatCommand
 {
@@ -21,6 +22,8 @@ public class RepeatBasecommand extends RepeatCommand
 		this.addSubCommand(new CmdPause());
 		this.addSubCommand(new CmdStop());
 		this.addSubCommand(new CmdField());
+		
+		this.addRequirements(new ReqHasPerm(InternalPermission.ACCESS_BASE.node));
 	}
 	
 	@Override

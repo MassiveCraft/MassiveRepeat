@@ -4,6 +4,7 @@ import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.mcore4.cmd.HelpCommand;
 import com.massivecraft.mcore4.cmd.arg.ARBoolean;
 import com.massivecraft.mcore4.cmd.arg.ARInteger;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class CmdField extends RepeatCommand
 {
@@ -19,7 +20,8 @@ public class CmdField extends RepeatCommand
 		this.addSubCommand(new CmdFieldX<Integer>("maxdelay", ARInteger.get(), InternalPermission.FIELD_MAXDELAY));
 		this.addSubCommand(new CmdFieldX<Integer>("mininterval", ARInteger.get(), InternalPermission.FIELD_MININTERVAL));
 		this.addSubCommand(new CmdFieldX<Integer>("maxinterval", ARInteger.get(), InternalPermission.FIELD_MAXINTERVAL));
-		this.setDesc("manage repeater fields");
+		
+		this.addRequirements(new ReqHasPerm(InternalPermission.ACCESS_BASE_FIELD.node));
 	}
 	
 	@Override

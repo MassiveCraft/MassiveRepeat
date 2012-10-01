@@ -1,6 +1,8 @@
 package com.massivecraft.massiverepeat.cmd;
 
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.mcore4.cmd.HelpCommand;
+import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
 
 public class CmdFieldCmd extends RepeatCommand
 {
@@ -14,7 +16,7 @@ public class CmdFieldCmd extends RepeatCommand
 		this.addSubCommand(new CmdFieldCmdRemove());
 		this.addSubCommand(new CmdFieldCmdClear());
 		
-		this.setDesc("manage repeater commads");
+		this.addRequirements(new ReqHasPerm(InternalPermission.ACCESS_BASE_FIELD_CMD.node));
 	}
 	
 	@Override

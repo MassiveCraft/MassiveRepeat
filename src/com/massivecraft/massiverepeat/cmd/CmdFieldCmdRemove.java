@@ -34,6 +34,6 @@ public class CmdFieldCmdRemove extends RepeatCommand
 		index--;
 		repeater.getCmds().remove(index.intValue());
 		
-		this.msg("<i>Command removed from repeater \"<h>"+repeater.getId()+"<i>\".");
+		this.repeatmsg(repeater, "now has one less command.");
 	}
 }

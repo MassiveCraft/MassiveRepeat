@@ -22,6 +22,6 @@ public class CmdRestart extends RepeatCommand
 		
 		repeater.restart();
 		
-		this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" was restarted.");
+		this.repeatmsg(repeater, "was restarted.");
 	}
 }

@@ -24,11 +24,11 @@ public class CmdStop extends RepeatCommand
 		
 		if (result)
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" stopped.");
+			this.repeatmsg(repeater, "stopped.");
 		}
 		else
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" is already stopped.");
+			this.repeatmsg(repeater, "is already stopped.");
 		}
 	}
 }

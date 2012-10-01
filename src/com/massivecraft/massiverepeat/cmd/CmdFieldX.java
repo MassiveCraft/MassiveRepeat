@@ -35,7 +35,7 @@ public class CmdFieldX<T> extends RepeatCommand
 			this.set(repeater, val);
 		}
 		
-		this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" has "+fieldName+" = "+this.get(repeater)+".");
+		this.repeatmsg(repeater, "has %s = %s.", fieldName, this.get(repeater).toString());
 	}
 	
 	@SuppressWarnings("unchecked")

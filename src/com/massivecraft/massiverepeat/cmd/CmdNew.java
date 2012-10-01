@@ -65,7 +65,7 @@ public class CmdNew extends RepeatCommand
 			String commandName = Txt.divideOnFirstSpace(command).getKey();
 			if ( ! P.p.canSenderRepeatCommand(sender, commandName))
 			{
-				msg("<b>You are not allowed to repeat the \"<h>"+commandName+"<b>\"-command.");
+				msg("<b>You are not allowed to repeat the \"<h>%s<b>\"-command.", commandName);
 				return;
 			}
 		}

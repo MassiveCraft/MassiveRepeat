@@ -24,11 +24,11 @@ public class CmdStart extends RepeatCommand
 		
 		if (result)
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" started.");
+			this.repeatmsg(repeater, "started.");
 		}
 		else
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" is already running.");
+			this.repeatmsg(repeater, "is already running.");
 		}
 	}
 }

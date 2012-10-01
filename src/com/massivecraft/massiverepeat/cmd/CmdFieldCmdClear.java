@@ -22,6 +22,6 @@ public class CmdFieldCmdClear extends RepeatCommand
 		
 		repeater.getCmds().clear();
 		
-		this.msg("<i>Removed all commands from repeater \"<h>"+repeater.getId()+"<i>\".");
+		this.repeatmsg(repeater, "has no commands now.");
 	}
 }

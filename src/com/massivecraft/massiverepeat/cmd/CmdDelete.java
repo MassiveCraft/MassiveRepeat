@@ -20,7 +20,7 @@ public class CmdDelete extends RepeatCommand
 		Repeater repeater = this.arg(0, ARRepeater.get());
 		if (repeater == null) return;
 		
-		this.msg("<i>Deleted repeater \"<h>"+repeater.getId()+"<i>\".");
+		this.repeatmsg(repeater, "was deleted.");
 		
 		repeater.stop();
 		repeater.detach();

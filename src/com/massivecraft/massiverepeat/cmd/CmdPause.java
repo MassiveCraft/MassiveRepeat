@@ -24,11 +24,11 @@ public class CmdPause extends RepeatCommand
 		
 		if (result)
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" paused.");
+			this.repeatmsg(repeater, "paused.");
 		}
 		else
 		{
-			this.msg("<i>Repeater \"<h>"+repeater.getId()+"<i>\" is already paused.");
+			this.repeatmsg(repeater, "is already paused.");
 		}
 	}
 }

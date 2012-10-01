@@ -30,13 +30,12 @@ public class CmdFieldCmdAdd extends RepeatCommand
 		String commandName = Txt.divideOnFirstSpace(command).getKey();
 		if ( ! P.p.canSenderRepeatCommand(sender, commandName))
 		{
-			msg("<b>You are not allowed to repeat the \"<h>"+commandName+"<b>\"-command.");
+			msg("<b>You are not allowed to repeat the \"<h>%s<b>\"-command.", commandName);
 			return;
 		}
 		
-		
 		repeater.addCmd(command);
 		
-		this.msg("<i>Added command to repeater \"<h>"+repeater.getId()+"<i>\".");
+		this.repeatmsg(repeater, "got a new command.");
 	}
 }

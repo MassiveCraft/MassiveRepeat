@@ -2,7 +2,7 @@ package com.massivecraft.massiverepeat.cmd;
 
 import java.util.List;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.arg.ARInteger;
@@ -16,7 +16,7 @@ public class CmdFieldCmdList extends RepeatCommand
 		this.addAliases("l","ls","list");
 		this.addRequiredArg("id");
 		this.addOptionalArg("page", "1");
-		this.addRequirements(new ReqHasPerm(Permission.FIELD_CMDS_LIST.node));
+		this.addRequirements(new ReqHasPerm(InternalPermission.FIELD_CMDS_LIST.node));
 	}
 
 	@Override

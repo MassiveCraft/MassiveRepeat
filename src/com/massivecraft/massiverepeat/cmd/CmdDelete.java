@@ -1,6 +1,6 @@
 package com.massivecraft.massiverepeat.cmd;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
@@ -11,7 +11,7 @@ public class CmdDelete extends RepeatCommand
 	{
 		this.addAliases("del","delete","rm","rem","remove");
 		this.addRequiredArg("id");
-		this.addRequirements(new ReqHasPerm(Permission.DELETE.node));
+		this.addRequirements(new ReqHasPerm(InternalPermission.DELETE.node));
 	}
 
 	@Override

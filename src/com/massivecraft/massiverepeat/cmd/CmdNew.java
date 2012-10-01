@@ -2,8 +2,8 @@ package com.massivecraft.massiverepeat.cmd;
 
 import java.util.Map.Entry;
 
-import com.massivecraft.massiverepeat.P;
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
+import com.massivecraft.massiverepeat.RepeatPerm;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
 import com.massivecraft.mcore4.cmd.arg.ARInteger;
@@ -15,7 +15,7 @@ public class CmdNew extends RepeatCommand
 {
 	protected boolean autostart;
 	
-	public CmdNew(String alias, Permission perm, boolean autostart)
+	public CmdNew(String alias, InternalPermission perm, boolean autostart)
 	{
 		this.addAliases(alias);
 		this.addRequiredArg("id|temp");
@@ -63,11 +63,12 @@ public class CmdNew extends RepeatCommand
 			command = this.argConcatFrom(4);
 			command = Txt.removeLeadingCommandDust(command);
 			String commandName = Txt.divideOnFirstSpace(command).getKey();
-			if ( ! P.p.canSenderRepeatCommand(sender, commandName))
+			if (! RepeatPerm.has(sender, commandName, true)) return;
+			/*if ( ! P.p.canSenderRepeatCommand(sender, commandName))
 			{
 				msg("<b>You are not allowed to repeat the \"<h>%s<b>\"-command.", commandName);
 				return;
-			}
+			}*/
 		}
 		
 		Repeater repeater;

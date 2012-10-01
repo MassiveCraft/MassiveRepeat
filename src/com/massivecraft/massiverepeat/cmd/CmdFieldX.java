@@ -2,7 +2,7 @@ package com.massivecraft.massiverepeat.cmd;
 
 import java.lang.reflect.Field;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.arg.ArgReader;
@@ -12,7 +12,7 @@ public class CmdFieldX<T> extends RepeatCommand
 {
 	String fieldName;
 	ArgReader<T> argReader;
-	public CmdFieldX(String fieldName, ArgReader<T> argReader, Permission perm)
+	public CmdFieldX(String fieldName, ArgReader<T> argReader, InternalPermission perm)
 	{
 		this.addAliases(fieldName);
 		this.addRequiredArg("id");

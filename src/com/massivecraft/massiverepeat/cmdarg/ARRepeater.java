@@ -2,7 +2,7 @@ package com.massivecraft.massiverepeat.cmdarg;
 
 import java.util.Collection;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
 import com.massivecraft.mcore4.cmd.MCommand;
@@ -25,7 +25,7 @@ public class ARRepeater extends ARAbstractSelect<Repeater>
 	@Override
 	public boolean canList(MCommand mcommand)
 	{
-		return Permission.LIST.has(mcommand.sender, false);
+		return InternalPermission.LIST.has(mcommand.sender, false);
 	}
 
 	@Override

@@ -1,9 +1,5 @@
 package com.massivecraft.massiverepeat;
 
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.RegisteredServiceProvider;
-
 import com.massivecraft.massiverepeat.cmd.RepeatBasecommand;
 import com.massivecraft.mcore4.MPlugin;
 
@@ -14,8 +10,6 @@ public class P extends MPlugin
 	
 	// Command
 	public RepeatBasecommand basecommand;
-	
-	public static net.milkbowl.vault.permission.Permission vaultPerm = null;
 	
 	public P()
 	{
@@ -30,13 +24,6 @@ public class P extends MPlugin
 		// Load Conf from disk
 		Conf.load();
 		
-		// Vault integration
-		if ( ! this.setupPermissions())
-		{
-			log("Vault missing!");
-			this.suicide();
-		}
-		
 		// Load and startup repeaters
 		int startedCount = RepeaterManager.i.startup();
 		int totalCount = RepeaterManager.i.getAll().size();
@@ -49,24 +36,5 @@ public class P extends MPlugin
 		this.basecommand.register();
 		
 		postEnable();
-	}
-	
-	protected Boolean setupPermissions()
-    {
-        RegisteredServiceProvider<net.milkbowl.vault.permission.Permission> permissionProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.permission.Permission.class);
-        if (permissionProvider != null)
-        {
-        	vaultPerm = permissionProvider.getProvider();
-        }
-        return (vaultPerm != null);
-    } 
-	
-	public boolean canSenderRepeatCommand(CommandSender sender, String command)
-	{
-		if (sender.hasPermission(Permission.REPEAT_STAR.node)) return true;
-		if ( ! (sender instanceof Player)) return false;
-		Player player = (Player)sender;
-		String permission = "massiverepeat.repeat."+command;
-		return vaultPerm.playerHas(player, permission);
 	}
 }

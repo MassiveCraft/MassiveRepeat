@@ -1,7 +1,7 @@
 name: massiverepeat
 version: 1.0.1
 main: com.massivecraft.massiverepeat.P
-depend: [mcore4, Vault]
+depend: [mcore4]
 permissions:
 # -------------------------------------------- #
 # THE REAL NODES

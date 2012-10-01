@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 
 import com.massivecraft.mcore4.util.Perm;
 
-public enum Permission
+public enum InternalPermission
 {
 	CREATE("create"),
 	ADD("add"),
@@ -31,7 +31,7 @@ public enum Permission
 	
 	public final String node;
 	
-	Permission(final String permissionNode)
+	InternalPermission(final String permissionNode)
 	{
 		this.node = "massiverepeat."+permissionNode;
     }

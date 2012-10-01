@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterManager;
 import com.massivecraft.massiverepeat.cmdutil.ListCommandComparator;
@@ -20,7 +20,7 @@ public class CmdList extends RepeatCommand
 		this.addAliases("l","ls","list");
 		this.addOptionalArg("page", "1");
 		this.addOptionalArg("creator", "*anyone*");
-		this.addRequirements(new ReqHasPerm(Permission.LIST.node));
+		this.addRequirements(new ReqHasPerm(InternalPermission.LIST.node));
 	}
 
 	@Override

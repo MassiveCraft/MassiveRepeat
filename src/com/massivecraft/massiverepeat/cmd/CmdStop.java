@@ -1,6 +1,6 @@
 package com.massivecraft.massiverepeat.cmd;
 
-import com.massivecraft.massiverepeat.Permission;
+import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
 import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
@@ -11,7 +11,7 @@ public class CmdStop extends RepeatCommand
 	{
 		this.addAliases("stop");
 		this.addRequiredArg("id");
-		this.addRequirements(new ReqHasPerm(Permission.STOP.node));
+		this.addRequirements(new ReqHasPerm(InternalPermission.STOP.node));
 	}
 
 	@Override

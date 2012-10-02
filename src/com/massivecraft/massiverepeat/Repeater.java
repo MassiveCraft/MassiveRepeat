@@ -30,7 +30,6 @@ public class Repeater extends com.massivecraft.mcore4.store.Entity<Repeater, Str
 	@Override
 	public Repeater load(Repeater that)
 	{
-		System.out.println("did creatorName" + creatorName);
 		this.creatorName = that.creatorName;
 		this.cmds = that.cmds;
 		this.permanent = that.permanent;

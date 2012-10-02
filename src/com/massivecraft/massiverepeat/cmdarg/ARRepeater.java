@@ -31,7 +31,7 @@ public class ARRepeater extends ARAbstractSelect<Repeater>
 	@Override
 	public Collection<String> altNames(MCommand mcommand)
 	{
-		return RepeaterColl.i.ids();
+		return RepeaterColl.i.getIds();
 	}
 	
 	// -------------------------------------------- //

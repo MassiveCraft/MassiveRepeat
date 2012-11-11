@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
-import com.massivecraft.mcore4.util.Perm;
+import com.massivecraft.mcore5.util.Perm;
 
 public class RepeatPerm
 {

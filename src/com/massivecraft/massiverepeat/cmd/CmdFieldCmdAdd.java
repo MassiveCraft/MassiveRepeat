@@ -4,8 +4,8 @@ import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.RepeatPerm;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
-import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
-import com.massivecraft.mcore4.util.Txt;
+import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore5.util.Txt;
 
 public class CmdFieldCmdAdd extends RepeatCommand
 {

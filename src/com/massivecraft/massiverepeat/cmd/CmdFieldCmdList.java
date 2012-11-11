@@ -5,9 +5,9 @@ import java.util.List;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
-import com.massivecraft.mcore4.cmd.arg.ARInteger;
-import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
-import com.massivecraft.mcore4.util.Txt;
+import com.massivecraft.mcore5.cmd.arg.ARInteger;
+import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore5.util.Txt;
 
 public class CmdFieldCmdList extends RepeatCommand
 {

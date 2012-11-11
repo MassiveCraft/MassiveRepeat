@@ -1,8 +1,8 @@
 package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.InternalPermission;
-import com.massivecraft.mcore4.cmd.HelpCommand;
-import com.massivecraft.mcore4.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore5.cmd.HelpCommand;
+import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
 
 public class CmdFieldCmd extends RepeatCommand
 {

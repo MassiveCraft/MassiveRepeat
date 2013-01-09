@@ -29,6 +29,6 @@ public class CmdShow extends RepeatCommand
 		if (pageHumanBased == null) return;
 		
 		List<String> lines = Txt.parseWrap(repeater.getDescMultiLine());
-		this.sendMessage(Txt.getPage(lines, pageHumanBased, "Repeater "+repeater.getId()));
+		this.sendMessage(Txt.getPage(lines, pageHumanBased, "Repeater "+repeater.getId(), sender));
 	}
 }

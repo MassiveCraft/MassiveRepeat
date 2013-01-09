@@ -30,6 +30,6 @@ public class CmdFieldCmdList extends RepeatCommand
 		
 		List<String> lines = Txt.parseWrap(repeater.getFormatedCommandList());
 		 
-		this.sendMessage(Txt.getPage(lines, pageHumanBased, ""+repeater.getCmds().size()+" Commands"));
+		this.sendMessage(Txt.getPage(lines, pageHumanBased, ""+repeater.getCmds().size()+" Commands", sender));
 	}
 }

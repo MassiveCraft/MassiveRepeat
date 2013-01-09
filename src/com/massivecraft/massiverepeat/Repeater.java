@@ -14,16 +14,6 @@ import com.massivecraft.mcore5.util.Txt;
 public class Repeater extends com.massivecraft.mcore5.store.Entity<Repeater, String> implements Runnable
 {
 	// -------------------------------------------- //
-	// META
-	// -------------------------------------------- //
-	
-	@Override protected Repeater getThis() { return this; }
-	
-	private final static transient Repeater defaultInstance = new Repeater();
-	@Override public Repeater getDefaultInstance(){ return defaultInstance; }
-	@Override protected Class<Repeater> getClazz() { return Repeater.class; }
-	
-	// -------------------------------------------- //
 	// LOAD
 	// -------------------------------------------- //
 	

@@ -50,6 +50,6 @@ public class CmdList extends RepeatCommand
 		}
 		
 		lines = Txt.parseWrap(lines);
-		this.sendMessage(Txt.getPage(lines, pageHumanBased, ""+repeaters.size()+" Repeaters"));
+		this.sendMessage(Txt.getPage(lines, pageHumanBased, ""+repeaters.size()+" Repeaters", sender));
 	}
 }

@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
-import com.massivecraft.mcore5.util.Perm;
+import com.massivecraft.mcore5.util.PermUtil;
 
 public class RepeatPerm
 {
@@ -16,14 +16,14 @@ public class RepeatPerm
 	{
 		if (sender.hasPermission(InternalPermission.REPEAT_STAR.node)) return true;
 		Permission permission = getPermissionForCommandCreative(command);
-		return Perm.has(sender, permission, verbose);
+		return PermUtil.has(sender, permission, verbose);
 	}
 	
 	public static boolean has(CommandSender sender, String command)
 	{
 		if (sender.hasPermission(InternalPermission.REPEAT_STAR.node)) return true;
 		Permission permission = getPermissionForCommandCreative(command);
-		return Perm.has(sender, permission);
+		return PermUtil.has(sender, permission);
 	}
 	
 	// -------------------------------------------- //
@@ -34,7 +34,7 @@ public class RepeatPerm
 	{
 		String name = calcPermissionNameForCommand(command);
 		String description = "repeat /"+command;
-		Permission permission = Perm.getCreative(name, description, PermissionDefault.OP);
+		Permission permission = PermUtil.get(true, false, name, description, PermissionDefault.OP);
 		permission.setDescription("repeat /"+command);
 		return permission;
 	}

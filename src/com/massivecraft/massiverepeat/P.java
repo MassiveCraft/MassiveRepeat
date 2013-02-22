@@ -35,7 +35,7 @@ public class P extends MPlugin
 		
 		// Add Base Commands
 		this.basecommand = new RepeatBasecommand();
-		this.basecommand.register();
+		this.basecommand.register(this);
 		
 		postEnable();
 	}

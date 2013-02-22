@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.RepeaterColl;
-import com.massivecraft.mcore5.cmd.arg.ARAbstractSelect;
+import com.massivecraft.mcore.cmd.arg.ARAbstractSelect;
 
 public class ARRepeater extends ARAbstractSelect<Repeater>
 {

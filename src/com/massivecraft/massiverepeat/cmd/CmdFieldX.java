@@ -5,8 +5,8 @@ import java.lang.reflect.Field;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
-import com.massivecraft.mcore5.cmd.arg.ArgReader;
-import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.cmd.arg.ArgReader;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
 
 public class CmdFieldX<T> extends RepeatCommand
 {

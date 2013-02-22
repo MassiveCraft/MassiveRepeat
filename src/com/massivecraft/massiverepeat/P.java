@@ -1,7 +1,7 @@
 package com.massivecraft.massiverepeat;
 
 import com.massivecraft.massiverepeat.cmd.RepeatBasecommand;
-import com.massivecraft.mcore5.MPlugin;
+import com.massivecraft.mcore.MPlugin;
 
 public class P extends MPlugin
 {

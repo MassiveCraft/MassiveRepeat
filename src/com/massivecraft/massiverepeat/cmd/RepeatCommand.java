@@ -1,8 +1,8 @@
 package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.Repeater;
-import com.massivecraft.mcore5.cmd.MCommand;
-import com.massivecraft.mcore5.util.Txt;
+import com.massivecraft.mcore.cmd.MCommand;
+import com.massivecraft.mcore.util.Txt;
 
 public abstract class RepeatCommand extends MCommand
 {

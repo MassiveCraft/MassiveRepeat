@@ -1,10 +1,10 @@
 package com.massivecraft.massiverepeat.cmd;
 
 import com.massivecraft.massiverepeat.InternalPermission;
-import com.massivecraft.mcore5.cmd.HelpCommand;
-import com.massivecraft.mcore5.cmd.arg.ARBoolean;
-import com.massivecraft.mcore5.cmd.arg.ARInteger;
-import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.cmd.HelpCommand;
+import com.massivecraft.mcore.cmd.arg.ARBoolean;
+import com.massivecraft.mcore.cmd.arg.ARInteger;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
 
 public class CmdField extends RepeatCommand
 {

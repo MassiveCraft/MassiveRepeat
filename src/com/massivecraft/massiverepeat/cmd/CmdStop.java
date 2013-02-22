@@ -3,7 +3,7 @@ package com.massivecraft.massiverepeat.cmd;
 import com.massivecraft.massiverepeat.InternalPermission;
 import com.massivecraft.massiverepeat.Repeater;
 import com.massivecraft.massiverepeat.cmdarg.ARRepeater;
-import com.massivecraft.mcore5.cmd.req.ReqHasPerm;
+import com.massivecraft.mcore.cmd.req.ReqHasPerm;
 
 public class CmdStop extends RepeatCommand
 {

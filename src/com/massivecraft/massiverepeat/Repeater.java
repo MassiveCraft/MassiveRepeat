@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import com.massivecraft.mcore.util.IntervalUtil;
 import com.massivecraft.mcore.util.Txt;
 
-public class Repeater extends com.massivecraft.mcore.store.Entity<Repeater, String> implements Runnable
+public class Repeater extends com.massivecraft.mcore.store.Entity<Repeater> implements Runnable
 {
 	// -------------------------------------------- //
 	// LOAD

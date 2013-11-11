@@ -17,7 +17,7 @@ public class RepeaterColl extends Coll<Repeater>
 	
 	private RepeaterColl()
 	{
-		super(Const.basenameRepeater, Repeater.class, MStore.getDb(ConfServer.dburi), P.p);
+		super(Const.basenameRepeater, Repeater.class, MStore.getDb(), P.p);
 	}
 	
 	// -------------------------------------------- //

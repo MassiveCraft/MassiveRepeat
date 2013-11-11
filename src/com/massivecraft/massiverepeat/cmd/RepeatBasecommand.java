@@ -9,9 +9,8 @@ public class RepeatBasecommand extends RepeatCommand
 {
 	public RepeatBasecommand()
 	{
-		super();
 		this.addAliases(ConfServer.aliases);
-		this.addSubCommand(HelpCommand.getInstance());
+		this.addSubCommand(HelpCommand.get());
 		this.addSubCommand(new CmdNew("create", InternalPermission.CREATE, false));
 		this.addSubCommand(new CmdNew("add", InternalPermission.ADD, true));
 		this.addSubCommand(new CmdDelete());
@@ -25,11 +24,5 @@ public class RepeatBasecommand extends RepeatCommand
 		
 		this.addRequirements(new ReqHasPerm(InternalPermission.ACCESS_BASE.node));
 	}
-	
-	@Override
-	public void perform()
-	{
-		this.getCommandChain().add(this);
-		HelpCommand.getInstance().execute(this.sender, this.args, this.commandChain);
-	}
+
 }

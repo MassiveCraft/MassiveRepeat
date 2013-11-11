@@ -11,8 +11,6 @@ public class ConfServer extends SimpleConfig
 	// FIELDS
 	// -------------------------------------------- //
 	
-	public static String dburi = "default";
-	
 	public static List<String> aliases = MUtil.list("rep", "repeat", "repeater");
 	
 	// -------------------------------------------- //

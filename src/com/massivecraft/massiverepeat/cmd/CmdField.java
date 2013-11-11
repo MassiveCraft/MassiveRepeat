@@ -10,7 +10,6 @@ public class CmdField extends RepeatCommand
 {
 	public CmdField()
 	{
-		super();
 		this.addAliases("field");
 		this.addSubCommand(new CmdFieldCmd());
 		this.addSubCommand(new CmdFieldX<Boolean>("permanent", ARBoolean.get(), InternalPermission.FIELD_PERMANENT));
@@ -28,6 +27,6 @@ public class CmdField extends RepeatCommand
 	public void perform()
 	{
 		this.getCommandChain().add(this);
-		HelpCommand.getInstance().execute(this.sender, this.args, this.commandChain);
+		HelpCommand.get().execute(this.sender, this.args, this.commandChain);
 	}
 }
